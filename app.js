@@ -27,11 +27,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', testAPIRouter);
 app.use('/users', customPage);
-app.use("/testAPI", testAPIRouter);
-app.use(express.static(path.join(__dirname, "client", "build")))
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-});
+//app.use("/testAPI", testAPIRouter);
+//app.use(express.static(path.join(__dirname, "client", "build")))
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

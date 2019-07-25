@@ -6,7 +6,7 @@ import { createBrowserHistory } from '../node_modules/history';
 
 
 import "./App.css";
-var url = "http://localhost:9000/testAPI"
+var url = "https://my-san.herokuapp.com/testAPI"
 
 class App extends Component {
     constructor(props) {
@@ -25,7 +25,7 @@ class App extends Component {
 
     handleSubmitY(event) {
       console.log('A name was submitted: ' + this.state.param + " "+this.state.form);
-      url = "http://localhost:9000/con/"
+      url = "https://my-san.herokuapp.com/con/"
       url += this.state.form+"/"+this.state.param
       console.log(url)
       event.preventDefault();
@@ -49,8 +49,25 @@ class App extends Component {
     }
 
     componentDidMount() {
-        this.callAPI(url);
-    }
+        //this.callAPI(url);
+
+        this.callBackendAPI()
+        .then(res => res.text())
+        .then(res => this.setState({ apiResponse: res },function() {
+          this.creatList()}))
+        .catch(err => console.log(err));
+      }
+      // Fetches our GET route from the Express server. (Note the route we are fetching matches the GET route from server.js
+      callBackendAPI = async () => {
+      const response = await fetch('/e');
+      const body = await response.json();
+
+      if (response.status !== 200) {
+        throw Error(body.message)
+      }
+      return body;
+      };
+
 
     creatList(){
       var punctRE = /[\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&*+\.\/;<=>?@\[\]^_`{|}~]/g;

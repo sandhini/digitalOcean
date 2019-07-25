@@ -14,9 +14,9 @@ const TOKEN_PATH = 'token.json';
 const decidedRange = 'B:G'
 // Load client secrets from a local file.
 
-app.get("/", function(req, res, next){
+app.get("/e", function(req, res, next){
   //res.send("hyoiuou")
-
+  console.log("eheh")
   // Authorization
   fs.readFile('credentials.json', (err, content) => {
     if (err) return console.log('Error loading client secret file:', err);
