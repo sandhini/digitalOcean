@@ -85,10 +85,10 @@ class App extends Component {
           <tr id = "childTable">
           <td scope="row">{value.Name}</td>
           <td>{value.Position}</td>
+          <td>{value.Division}</td>
           <td>{value.Team}</td>
           <td>{value.Projects}</td>
           <td>{value.Manager}</td>
-          <td>{value.Oversees}</td>
           </tr>
             //<b>Position:</b> {value.Position}<br/>
           //  <b>Projects:</b> {value.Projects}<br/>
@@ -106,10 +106,10 @@ class App extends Component {
     <tr id = "headTable">
     <th scope = "row">Name</th>
     <th>Position</th>
+    <th>Division</th>
     <th>Team</th>
     <th>Projects</th>
     <th>Manager</th>
-    <th>Oversees</th>
     </tr>
     {this._renderObject()}
      </tbody>
