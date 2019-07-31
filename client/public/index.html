@@ -25,17 +25,18 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id = "stick">
     <div id = "head">
-      Welcome to the Digital Ocean People Book<br>
+      Digital Ocean People Book<br>
       </div>
 
-      <form id = "search">
-      <fieldset>
-         <legend>Custom Search</legend>
+      <div id = "search">
          <p>
             <select id = "myList" onChange={this.handleFormPick} value = "">
               <option value = "Name">Name</option>
               <option value = "Position">Position</option>
               <option value = "Projects">Projects</option>
+              <option value = "Division">Division</option>
+              <option value = "Team">Team</option>
+              <option value = "Manager">Manager</option>
             </select>
 
       <input type = "text"
@@ -43,11 +44,10 @@
        value = ""
        onChange={this.handleChange} ></input>
 
-       <input type="submit" id = "submitB" value = "Submit" onSubmit = {this.handleSubmitY}></input>
+       <input type="submit" id = "submitB" value = "Go" onSubmit = {this.handleSubmitY}></input>
 
        </p>
-     </fieldset>
-   </form>
+   </div>
  </div>
     <div id="root">
 

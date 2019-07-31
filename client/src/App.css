@@ -15,6 +15,7 @@
 #personV{
   width: 250px;
   height: 170px;
+  display: inline-block;
   border: 3px solid #0069ff;
   padding: 7px;
   margin: 10px;
@@ -22,15 +23,46 @@
   color: rgba(3,27,78,.7);
   box-shadow: 2px 2px 2px 2px;
 }
-#search{
-  color: #0069ff;
-  display: flex;
-  margin-bottom: 5px;
-  direction: horizontal;
-  flex-wrap: wrap;
-  justify-content: center;
-  background: #0069ff;
-  background: white;
+#head{
+  margin-top: 22px;
+  float: left;
+  margin-left: 24px;
+  font-size: calc(1px + 3.3vmin);
+  font-family: "Futura";
+}
+
+#myText{
+    border: none;
+    padding: 8px;
+    height: 20px;
+    width: 250px;
+    border:1px solid #eaeaea;
+    outline:none;
+}
+input:hover{
+    border-color: #a0a0a0 #b9b9b9 #b9b9b9 #b9b9b9;
+}
+input:focus{
+    border-color:#4d90fe;
+}
+
+#submitB {
+    border-radius: 2px;
+    background: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    color: #757575;
+    cursor: default;
+    font-size: 14px;
+    font-weight: bold;
+    width: 50px;
+    height:36px;
+}
+#submitB:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    background: #f8f8f8;
+    border: 1px solid #c6c6c6;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    color: #222;
 }
 
 #stick{
@@ -38,45 +70,82 @@
   top: 0;
   left: 0;
   right: 0;
+  background: #3366ff;
+  height: 11vh;
+  padding: 10px;
+  color: white;
+  box-shadow: 5px 5px 18px #888888;
+}
+
+#search{
+  border: none;
+  float: right;
+  margin-right: 24px;
+}
+
+
+#myList{
+  border-radius: 2px;
+  background: #f2f2f2;
+  border: 1px solid #f2f2f2;
+  color: #757575;
+  cursor: default;
+  font-size: 14px;
+  font-weight: bold;
+  width: 80px;
+  height:36px;
+  text-align: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+#myList:hover .dropdown-content {
+  display: block;
 }
 
 #parentP{
  display: flex;
 }
 
-#head{
-  justify-content: center;
-  background: #3366ff;
-  display: flex;
-  height: 4vh;
-  padding: 10px;
-  font-size: calc(3px + 3.5vmin);
-  color: #0069ff;
-  background: white;
+#root{
+  text-align: center;
 }
-
 #parentP{
   background-color: white;
+  display: flex;
+  align-items: center;
   min-height: 100vh;
   justify-content: center;
   font-size: calc(8px + 1.5vmin);
   color: black;
-  margin-top: 160px;
-  margin-right: 100px;
-  width:100vw;
+  margin-top: 80px;
+  padding: 5vh;
+  box-shadow: 5px 5px 5px 5px #888888;
+
 }
 
 table, th {
 font-family: "Futura";
 font-size: 18px;
 color: #fff;
-line-height: 2.3;
-background-color: #668cff;
+line-height: 2.5;
+background-color: #3366ff;
+box-shadow: 5px 5px 18px #888888;
 }
 
 #childtable{
   max-height: 585px;
   overflow: auto;
+  display: inline-block;
+
 }
 
 
