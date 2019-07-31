@@ -122,14 +122,11 @@ input:focus{
   background-color: white;
   display: flex;
   align-items: center;
-  min-height: 100vh;
   justify-content: center;
   font-size: calc(8px + 1.5vmin);
   color: black;
   margin-top: 80px;
   padding: 5vh;
-  box-shadow: 5px 5px 5px 5px #888888;
-
 }
 
 table, th {
@@ -138,9 +135,11 @@ font-size: 18px;
 color: #fff;
 line-height: 2.5;
 background-color: #3366ff;
-box-shadow: 5px 5px 18px #888888;
 }
 
+th{
+  box-shadow: 8px 8px 18px #888888;
+}
 #childtable{
   max-height: 585px;
   overflow: auto;
