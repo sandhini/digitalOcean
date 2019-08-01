@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files
   console.log("uygug")
-  app.use(express.static(path.join(__dirname, 'client/build')));
+  app.use('/', testAPIRouter);
 // Handle React routing, return all requests to React app
   app.get('*', function(req, res) {
     res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
