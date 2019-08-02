@@ -16,7 +16,6 @@ const decidedRange = 'B:G';
 
 app.get("/:condition/:id", function(req, res, next){
   //res.send("hyoiuou")
-  console.log("HERE API")
   // Authorization
   fs.readFile('credentials.json', (err, content) => {
     if (err) return console.log('Error loading client secret file:', err);
@@ -61,7 +60,6 @@ app.get("/:condition/:id", function(req, res, next){
       console.log(check)
       for (var j = 0; j<check.length; j++){
         cleanStr = check[j].replace(punctRE, '').trim().toLowerCase();
-        console.log(cleanStr,"ACTUAL::::", id)
         if (cleanStr.includes(id)){
           console.log('here')
           toRend.push(rows[i])
@@ -70,7 +68,6 @@ app.get("/:condition/:id", function(req, res, next){
     }
     }
     // (4) Rendering the page and passing the rows data in
-    console.log(toRend, "API")
     res.send(toRend)
   });
   }

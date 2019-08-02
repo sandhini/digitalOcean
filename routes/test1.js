@@ -16,7 +16,6 @@ const decidedRange = 'B:G'
 
 app.get("/", function(req, res, next){
   //res.send("hyoiuou")
-  console.log("eheh")
   // Authorization
   fs.readFile('credentials.json', (err, content) => {
     if (err) return console.log('Error loading client secret file:', err);
@@ -39,7 +38,6 @@ app.get("/", function(req, res, next){
 
     // (3) Setting data for daily tracking
     const rows = response.data.values;
-    console.log(rows)
     // (4) Rendering the page and passing the rows data in
     res.send(rows)
   });
