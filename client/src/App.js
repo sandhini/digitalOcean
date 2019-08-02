@@ -6,7 +6,7 @@ import { createBrowserHistory } from '../node_modules/history';
 
 
 import "./App.css";
-var url = "http://localhost:11674/"
+var url = "/"
 
 class App extends Component {
     constructor(props) {
@@ -25,7 +25,7 @@ class App extends Component {
 
     handleSubmitY(event) {
       console.log('A name was submitted: ' + this.state.param + " "+this.state.form);
-      url = "http://localhost:8000/con/"
+      url = "/con/"
       url += this.state.form+"/"+this.state.param
       console.log(url)
       event.preventDefault();
