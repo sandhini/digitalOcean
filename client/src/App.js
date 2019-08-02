@@ -6,7 +6,7 @@ import { createBrowserHistory } from '../node_modules/history';
 
 
 import "./App.css";
-var url = "http://localhost:8000/"
+var url = "http://localhost:11674/"
 
 class App extends Component {
     constructor(props) {
