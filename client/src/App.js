@@ -1,12 +1,7 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
-import ReactDOM from "react-dom";
-import { createBrowserHistory } from '../node_modules/history';
-
-
-
 import "./App.css";
-var url = "/"
+
+var url = "/api"
 
 class App extends Component {
     constructor(props) {
